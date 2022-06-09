@@ -1,0 +1,108 @@
+a {
+    text-decoration: none;
+}
+.walletPage svg {
+    color: rgb(198,198,198);
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#cards {
+    display: inline;
+}
+#cards p {
+    margin-top: 10px;
+}
+#cards p +p +p {
+    font-weight: 500;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 300px;
+}
+#cards p +p svg {
+    position: absolute;
+    margin-left: 65px;
+    margin-top: -33px;
+}
+.header {
+    display: flex;
+    height: 50px;
+    background-color: rgb(48,48,48);
+}
+.cards button svg {
+    margin-top: 20px;
+    height: 20px;
+    margin: 0px;
+}
+.header p {
+    color: white;
+    margin-top: 13px;
+    font-size: 18px;
+}
+.back {
+    box-sizing: border-box;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.backActive:active {
+    background-color: rgb(102, 101, 101);
+    border-radius: 50%;
+}
+.content {
+    padding: 10px;
+}
+.content button {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    background-color: rgb(34,34,34);
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+.open {
+    color: rgb(198,198,198);
+}
+.closed {
+    display: none;
+}
+.mapCards {
+    margin-top: 15px;
+    height: 70px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(48,48,48);
+}
+.imgCard {
+    border-radius: 5px;
+    margin: 15px;
+    width: 70px;
+    height: 40px;
+}
+.mapCards div p {
+    font-weight: bold;
+    color: white;
+}
+.mapCards div {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 13px;
+}
+.visaORmaster {
+    height: 20px;
+    position: absolute;
+    margin-top: 29px;
+    margin-left: 49px;
+}

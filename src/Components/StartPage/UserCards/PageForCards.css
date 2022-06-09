@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+}
+.PageForCards {
+    box-sizing: border-box;
+    background-color: rgb(34,34,34);
+    height: 300px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+.wallet {
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    margin-left: 27px;
+    margin-right: 27px;
+    padding-top: 3px;
+}
+.wallet p {
+    color: rgb(164, 164, 164);
+    font-weight: 500;
+    margin-right: 210px;
+    margin-top: 3px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+.walletSVG {
+    margin-top: 3px;
+}
+.walletSVG svg {
+    color: rgb(153,190,95);
+}
+#wallet {
+    display: flex;
+} 
+a.navlink {
+    display: inline-block;
+}
