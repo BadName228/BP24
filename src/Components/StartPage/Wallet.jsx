@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 // components
 import Card from "./Card";
+import CardsInWallet from "../CardsInWallet/CardsInWallet.jsx";
+
 // CSS
 import "./wallet.css";
 
@@ -15,7 +17,6 @@ function Wallet({ cardsList }) {
   const [openDeposites, setOpenDeposites] = useState(false);
   const [openCredits, setOpenCredits] = useState(false);
   //
-  console.log(cardsList.cards);
   return (
     <div className="walletPage">
       <div className="header">
@@ -38,11 +39,13 @@ function Wallet({ cardsList }) {
               <FaAngleDown style={{ margineLeft: "20px" }} />
             )}
           </p>
-          <p style={{ color: "rgb(153,190,95)" }}>Добавить</p>
+          <p style={{ color: "rgb(153,190,95)", marginTop: "0px" }}>Добавить</p>
         </button>
         <div className={openCards ? "open" : "closed"}>
           {cardsList.cards.map((info) => (
-            <Card key={info.cvv} options={info} />
+            <NavLink to={`${window.location.pathname}/${info.id}`}>
+              <Card key={info.cvv} options={info} />
+            </NavLink>
           ))}
         </div>
         <button onClick={() => setOpenDeposites(!openDeposites)} id="cards">
@@ -58,9 +61,8 @@ function Wallet({ cardsList }) {
               <FaAngleDown style={{ margineLeft: "20px" }} />
             )}
           </p>
-          <p style={{ color: "rgb(153,190,95)" }}>Оформить</p>
+          <p style={{ color: "rgb(153,190,95)", marginTop: "0px" }}>Оформить</p>
         </button>
-        кредиты
         <button onClick={() => setOpenCredits(!openCredits)} id="cards">
           <p
             style={
@@ -76,11 +78,13 @@ function Wallet({ cardsList }) {
           </p>
         </button>
       </div>
+      <Routes>
+        <Route
+          path="/wallet/YlbsysNs8z"
+          element={<CardsInWallet options={cardsList.cards} />}
+        />
+      </Routes>
     </div>
   );
 }
 export default Wallet;
-
-/* {cardsList.cards.map((info) => {
-            <Card key={info.cvv} options={info} />;
-          })} */

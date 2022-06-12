@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<StartPage />} />
+        <Route exact path="/" element={<StartPage />} />
         <Route path="/wallet" element={<Wallet cardsList={allcards} />} />
       </Routes>
     </div>
