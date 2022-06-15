@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // components
 import Card from "./Card";
-import CardsInWallet from "../CardsInWallet/CardsInWallet.jsx";
 
 // CSS
 import "./wallet.css";
@@ -13,7 +12,7 @@ import { MdArrowBack } from "react-icons/md";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 function Wallet({ cardsList }) {
-  const [openCards, setOpenCards] = useState(false);
+  const [openCards, setOpenCards] = useState(true);
   const [openDeposites, setOpenDeposites] = useState(false);
   const [openCredits, setOpenCredits] = useState(false);
   //
@@ -44,7 +43,7 @@ function Wallet({ cardsList }) {
         <div className={openCards ? "open" : "closed"}>
           {cardsList.cards.map((info) => (
             <NavLink to={`${window.location.pathname}/${info.id}`}>
-              <Card key={info.cvv} options={info} />
+              <Card key={info.id} options={info} />
             </NavLink>
           ))}
         </div>
@@ -78,12 +77,6 @@ function Wallet({ cardsList }) {
           </p>
         </button>
       </div>
-      <Routes>
-        <Route
-          path="/wallet/YlbsysNs8z"
-          element={<CardsInWallet options={cardsList.cards} />}
-        />
-      </Routes>
     </div>
   );
 }
